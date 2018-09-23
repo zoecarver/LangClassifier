@@ -11,7 +11,7 @@ import math
 
 
 # Most of these should be moved to a config file
-epochs = 100000
+epochs = 100000 * 5  # run though all the data 5 times
 print_every = 5000
 plot_every = 1000
 
@@ -84,8 +84,8 @@ def train_model():
     rnn.save()
 
 
-test_letter_to_tensor()
-test_line_to_tensor()
+# test_letter_to_tensor()
+# test_line_to_tensor()
 
 if RNN.model_exists():
     print('loading saved model')
